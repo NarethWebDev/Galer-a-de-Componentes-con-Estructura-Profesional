@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Componentes de Bootstrap</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="assents/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="70">
+    <div class="container my-5">
+        <h1>Componentes de Bootstrap</h1>
+        <!-- Accordion -->
+        <section id="accordion" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-list-task text-primary"></i> 1. Accordion</h2>
+                <p class="text-muted">Paneles colapsables para organizar contenido de forma vertical</p>
+            </div>
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse1">
+                            <i class="bi bi-question-circle me-2"></i> ¿Qué es un Accordion?
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Un <strong>accordion</strong> es un componente que permite mostrar y ocultar contenido de
+                            forma organizada. Perfecto para FAQs, menús desplegables o secciones de información.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse2">
+                            <i class="bi bi-star me-2"></i> ¿Para qué sirve?
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Sirve para <strong>ahorrar espacio</strong> en la página y organizar información
+                            relacionada. Solo se muestra una sección a la vez.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse3">
+                            <i class="bi bi-lightbulb me-2"></i> ¿Cuándo usarlo?
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Ideal para <strong>preguntas frecuentes, menús de navegación, especificaciones de
+                                productos</strong> o cualquier contenido que se pueda categorizar.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerts -->
+        <section id="alerts" class="section" tabindex="-1">
+            <h2>Alerts</h2>
+            <p>Mensajes importantes o notificaciones para el usuario.</p>
+            <div class="example-row">
+                <div class="alert alert-primary" role="alert">Primary alert — información general</div>
+                <div class="alert alert-success" role="alert">Success — operación exitosa</div>
+                <div class="alert alert-danger" role="alert">Danger — error o peligro</div>
+                <div class="alert alert-warning" role="alert">Warning — advertencia</div>
+                <div class="alert alert-info" role="alert">Info — información</div>
+            </div>
+        </section>
+
+        <!-- Badge -->
+        <section id="badges" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-award text-success"></i> 3. Badges</h2>
+                <p class="text-muted">Etiquetas pequeñas para contar o categorizar elementos</p>
+            </div>
+
+            <h5>Badges de colores:</h5>
+            <span class="badge bg-primary m-1">Primary</span>
+            <span class="badge bg-secondary m-1">Secondary</span>
+            <span class="badge bg-success m-1">Success</span>
+            <span class="badge bg-danger m-1">Danger</span>
+            <span class="badge bg-warning text-dark m-1">Warning</span>
+            <span class="badge bg-info text-dark m-1">Info</span>
+            <span class="badge bg-light text-dark m-1">Light</span>
+            <span class="badge bg-dark m-1">Dark</span>
+
+            <h5 class="mt-4">Badges en botones:</h5>
+            <button class="btn btn-primary">
+                Mensajes <span class="badge bg-danger">4</span>
+            </button>
+            <button class="btn btn-secondary">
+                Notificaciones <span class="badge bg-warning text-dark">9+</span>
+            </button>
+
+            <h5 class="mt-4">Badges redondeados (pills):</h5>
+            <span class="badge rounded-pill bg-primary m-1">Nuevo</span>
+            <span class="badge rounded-pill bg-success m-1">Popular</span>
+            <span class="badge rounded-pill bg-danger m-1">Oferta</span>
+
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Los badges son perfectos para mostrar contadores (notificaciones,
+                mensajes), etiquetas de estado (nuevo, popular) o categorías.
+            </div>
+        </section>
+
+        <!-- Breadcrumb -->
+        <section id="breadcrumb" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-signpost text-info"></i> 4. Breadcrumb</h2>
+                <p class="text-muted">Navegación jerárquica que muestra la ubicación actual</p>
+            </div>
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#"><i class="bi bi-house-fill"></i> Inicio</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Componentes</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Breadcrumb</li>
+                </ol>
+            </nav>
+
+            <div class="info-box">
+                <strong>¿Para qué sirve?</strong> El breadcrumb ayuda al usuario a saber dónde está dentro del sitio y
+                navegar fácilmente a secciones anteriores.
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section id="buttons" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-cursor text-primary"></i> 5. Buttons</h2>
+                <p class="text-muted">Botones para acciones e interacciones del usuario</p>
+            </div>
+
+            <h5>Botones de colores:</h5>
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary m-1">Primary</button>
+                <button type="button" class="btn btn-secondary m-1">Secondary</button>
+                <button type="button" class="btn btn-success m-1">Success</button>
+                <button type="button" class="btn btn-danger m-1">Danger</button>
+                <button type="button" class="btn btn-warning m-1">Warning</button>
+                <button type="button" class="btn btn-info m-1">Info</button>
+                <button type="button" class="btn btn-light m-1">Light</button>
+                <button type="button" class="btn btn-dark m-1">Dark</button>
+            </div>
+
+            <h5>Botones outline (solo borde):</h5>
+            <div class="mb-3">
+                <button type="button" class="btn btn-outline-primary m-1">Primary</button>
+                <button type="button" class="btn btn-outline-success m-1">Success</button>
+                <button type="button" class="btn btn-outline-danger m-1">Danger</button>
+            </div>
+
+            <h5>Tamaños:</h5>
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary btn-lg m-1">Grande</button>
+                <button type="button" class="btn btn-primary m-1">Normal</button>
+                <button type="button" class="btn btn-primary btn-sm m-1">Pequeño</button>
+            </div>
+
+            <div class="info-box">
+                <strong>¿Para qué sirve?</strong> Los botones permiten al usuario realizar acciones (enviar formularios,
+                abrir modales, navegar, etc.).
+            </div>
+        </section>
+
+        <!-- Button group -->
+        <section id="button-group" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-collection text-secondary"></i> 6. Button Group</h2>
+                <p class="text-muted">Agrupa varios botones en una sola línea</p>
+            </div>
+
+            <h5>Grupo horizontal:</h5>
+            <div class="btn-group mb-3" role="group">
+                <button type="button" class="btn btn-primary">Izquierda</button>
+                <button type="button" class="btn btn-primary">Centro</button>
+                <button type="button" class="btn btn-primary">Derecha</button>
+            </div>
+
+            <h5>Grupo con iconos:</h5>
+            <div class="btn-group mb-3" role="group">
+                <button type="button" class="btn btn-outline-primary">
+                    <i class="bi bi-align-start"></i>
+                </button>
+                <button type="button" class="btn btn-outline-primary">
+                    <i class="bi bi-align-center"></i>
+                </button>
+                <button type="button" class="btn btn-outline-primary">
+                    <i class="bi bi-align-end"></i>
+                </button>
+            </div>
+
+            <h5>Grupo vertical:</h5>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-secondary">Opción 1</button>
+                <button type="button" class="btn btn-secondary">Opción 2</button>
+                <button type="button" class="btn btn-secondary">Opción 3</button>
+            </div>
+
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Agrupa botones relacionados, como controles de alineación, opciones de
+                vista o acciones similares.
+            </div>
+        </section>
+        <!-- Card -->
+        <section id="card" class="component-section mb-4">
+            <div class="component-header">
+                <h2><i class="bi bi-card-heading text-success"></i> 7. Card</h2>
+                <p class="text-muted">Contenedores flexibles para mostrar contenido</p>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <div class="card-body">
+                        <div class="card" style="width: 18rem">
+                            <img src="https://www.motoscortes.com/wp-content/uploads/2024/07/2024-Yamaha-YZF600R6R-MOTOS-CORTES.webp"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <h5 class="card-title">¿Para qué sirve? </h5>
+                                <p class="card-text">Las cards son contenedores versátiles para mostrar productos,
+                                    artículos, perfiles de usuario o cualquier contenido estructurado.</p>
+                                <a href="#" class="btn btn-success btn-sm">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+        <!-- Carousel -->
+        <section id="carousel" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-images text-danger"></i> 8. Carousel</h2>
+                <p class="text-muted">Carrusel de diapositivas para imágenes o contenido</p>
+            </div>
+
+            <div id="carouselDemo" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <div class="carousel-slide bg-primary">
+                            <div class="carousel-content">
+                                <i class="bi bi-1-circle display-1"></i>
+                                <img src="https://www.univision.com/_next/image?url=https%3A%2F%2Fst1.uvnimg.com%2Fd4%2F4a%2F006304a74db4902c0b4d8d8026c8%2Fchevrolet-corvette-c8-stingray-2020-1280-08.jpg&w=640&q=75"
+                                    class="d-block w-100" alt="..." />
+                                <p>Muestra imágenes o contenido en formato de presentación</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-slide bg-success">
+                            <div class="carousel-content">
+                                <i class="bi bi-2-circle display-1"></i>
+                                <img src="https://www.supercars.net/blog/wp-content/uploads/2024/06/2023-Chevrolet-Corvette-Z06.jpeg"
+                                    class="d-block w-100" alt="..." />
+                                <p>Perfecto para galerías de imágenes o promociones</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-slide bg-warning">
+                            <div class="carousel-content">
+                                <i class="bi bi-3-circle display-1"></i>
+                                <img src="https://assets.qz.com/media/3225540ced2d617caf8ce72dc304c89d.jpg"
+                                    class="d-block w-100" alt="..." />
+                                <p>Incluye controles para navegar entre diapositivas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> El carousel es ideal para mostrar varias imágenes, productos
+                destacados, testimonios o promociones en un espacio reducido.
+            </div>
+        </section>
+
+
+        <!-- Close button -->
+        <section id="close-button" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-x-circle text-danger"></i> 9. Close Button</h2>
+                <p class="text-muted">Botón para cerrar componentes como alerts y modales</p>
+            </div>
+
+            <div class="d-flex gap-4 align-items-center flex-wrap">
+                <div>
+                    <p class="mb-2">Close button normal:</p>
+                    <button type="button" class="btn-close" aria-label="Close"></button>
+                </div>
+
+                <div>
+                    <p class="mb-2">Close button deshabilitado:</p>
+                    <button type="button" class="btn-close" disabled aria-label="Close"></button>
+                </div>
+
+                <div>
+                    <p class="mb-2">Close button en fondo oscuro:</p>
+                    <div class="bg-dark p-3 rounded">
+                        <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Se usa para cerrar alerts, modales, offcanvas y otros componentes
+                dismissibles.
+            </div>
+        </section>
+
+        <!-- Collapse -->
+        <section id="collapse" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-arrows-collapse text-info"></i> 10. Collapse</h2>
+                <p class="text-muted">Muestra y oculta contenido de forma interactiva</p>
+            </div>
+
+            <p>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample">
+                    <i class="bi bi-chevron-down"></i> Clic para mostrar/ocultar
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    Este es un ejemplo de contenido <strong>colapsable</strong>. El componente Collapse permite mostrar
+                    y ocultar contenido sin JavaScript adicional. Es la base para crear Accordions y otros componentes
+                    interactivos.
+                </div>
+            </div>
+
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Collapse oculta contenido que no es esencial al cargar la página,
+                ahorrando espacio y mejorando la experiencia del usuario.
+            </div>
+        </section>
+
+        <!-- Dropdowns -->
+        <section id="dropdowns" class="section" tabindex="-1">
+            <div class="component-header">
+                <h2><i class="bi bi-chevron-down text-primary"></i> 11. Dropdowns</h2>
+                <p class="text-muted">Menús desplegables para opciones contextuales</p>
+            </div>
+            <div class="example-row">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" id="dropdownMenu"
+                        data-bs-toggle="dropdown">Dropdown</button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                        <li><a class="dropdown-item" href="#">Acción</a></li>
+                        <li><a class="dropdown-item" href="#">Otra acción</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Algo más</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Los dropdowns son perfectos para menús de navegación, opciones de
+                configuración, acciones de usuario y cualquier lista de opciones.
+            </div>
+        </section>
+
+        <!-- List group -->
+        <section id="list-group" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-list-ul text-success"></i> 12. List Group</h2>
+                <p class="text-muted">Listas flexibles y potentes para mostrar contenido</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5>Lista básica:</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item active">
+                            <i class="bi bi-check-circle"></i> Item activo
+                        </li>
+                        <li class="list-group-item">Segundo item</li>
+                        <li class="list-group-item">Tercer item</li>
+                        <li class="list-group-item disabled">Item deshabilitado</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h5>Lista con badges:</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-envelope"></i> Mensajes</span>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-bell"></i> Notificaciones</span>
+                            <span class="badge bg-danger rounded-pill">9</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-check2-square"></i> Tareas</span>
+                            <span class="badge bg-success rounded-pill">3</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> List group es ideal para menús laterales, listas de tareas, perfiles
+                de usuario, inbox de mensajes o cualquier contenido en lista.
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <section id="modal" class="section" tabindex="-1">
+            <h2>Modal</h2>
+            <p>Ventana emergente que permite interacción sin salir de la página.</p>
+            <div class="example-row">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sampleModal">Abrir
+                    Modal</button>
+            </div>
+
+            <!-- Modal markup -->
+            <div class="modal fade" id="sampleModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Título del Modal</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            Contenido del modal. Aquí van formularios, textos o imágenes.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Guardar cambios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navbar -->
+        <section id="navbar" class="section" tabindex="-1">
+            <h2>Navbar</h2>
+            <p>Barra de navegación responsiva para dirigir al usuario por la web.</p>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+                <div class="container-fluid" style="max-width:860px; margin:0 auto;">
+                    <a class="navbar-brand" href="#">Mi sitio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navExample">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navExample">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Enlace</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown">Más</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Acción</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <div class="info-box">
+                <strong>¿Para qué sirve?</strong> El navbar es la navegación principal del sitio. Permite al usuario
+                moverse entre páginas y acceder a funciones importantes.
+            </div>
+        </section>
+
+        <!-- Navs & tabs -->
+        <section id="navs-tabs" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-menu-button text-secondary"></i> 15. Navs & Tabs</h2>
+                <p class="text-muted">Navegación por pestañas y pills</p>
+            </div>
+
+            <h5>Tabs (pestañas):</h5>
+            <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-pane"
+                        type="button">
+                        <i class="bi bi-house"></i> Inicio
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-pane"
+                        type="button">
+                        <i class="bi bi-person"></i> Perfil
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-pane"
+                        type="button">
+                        <i class="bi bi-envelope"></i> Contacto
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content border border-top-0 p-3 rounded-bottom" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-pane" role="tabpanel">
+                    <h5>Contenido de Inicio</h5>
+                    <p>Este es el contenido del tab de inicio. Los tabs permiten organizar contenido relacionado en un
+                        espacio compacto.</p>
+                </div>
+                <div class="tab-pane fade" id="profile-pane" role="tabpanel">
+                    <h5>Contenido de Perfil</h5>
+                    <p>Aquí iría la información del perfil del usuario, configuraciones, preferencias, etc.</p>
+                </div>
+                <div class="tab-pane fade" id="contact-pane" role="tabpanel">
+                    <h5>Contenido de Contacto</h5>
+                    <p>Formulario de contacto, información de soporte o datos de contacto de la empresa.</p>
+                </div>
+            </div>
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Navs & Tabs organizan contenido relacionado en pestañas, perfecto para
+                paneles de configuración, perfiles de usuario o secciones de información.
+            </div>
+        </section>
+
+        <!-- Offcanvas -->
+        <section id="offcanvas" class="section" tabindex="-1">
+            <h2>Offcanvas</h2>
+            <p>Panel deslizante que aparece desde un lateral para mostrar menús o contenido extra.</p>
+            <div class="example-row">
+                <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Abrir
+                    Offcanvas</button>
+            </div>
+
+            <div class="offcanvas offcanvas-start" id="offcanvasExample" tabindex="-1">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body">
+                    Contenido del offcanvas. Puedes poner formularios o enlaces aquí.
+                </div>
+            </div>
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Offcanvas es perfecto para menús de navegación móvil, filtros, carrito
+                de compras o cualquier contenido que deba aparecer desde el lateral.
+            </div>
+        </section>
+
+        <!-- Pagination -->
+        <section id="pagination" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-file-earmark-bar-graph text-success"></i> 17. Pagination</h2>
+                <p class="text-muted">Navegación entre páginas de contenido</p>
+            </div>
+
+            <h5>Paginación básica:</h5>
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <h5>Paginación con iconos:</h5>
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#"><i class="bi bi-chevron-double-left"></i></a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#"><i class="bi bi-chevron-double-right"></i></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="info-box">
+                <strong>¿Para qué sirve?</strong> La paginación divide contenido extenso (artículos, productos,
+                resultados de búsqueda) en páginas más manejables.
+            </div>
+        </section>
+
+        <!-- Placeholders -->
+        <section id="placeholders" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-hourglass-split text-warning"></i> 18. Placeholders</h2>
+                <p class="text-muted">Indicadores de carga mientras se obtiene contenido</p>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title placeholder-glow">
+                        <span class="placeholder col-6"></span>
+                    </h5>
+                    <p class="card-text placeholder-glow">
+                        <span class="placeholder col-7"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-6"></span>
+                        <span class="placeholder col-8"></span>
+                    </p>
+                    <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+                </div>
+            </div>
+
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Los placeholders muestran al usuario que el contenido está cargando,
+                mejorando la percepción de velocidad del sitio.
+            </div>
+        </section>
+
+        <!-- Popovers -->
+        <section id="popovers" class="section" tabindex="-1">
+            <h2>Popovers</h2>
+            <p>Cuadros de diálogo emergentes con información contextual al hacer clic o pasar por encima.</p>
+            <div class="example-row">
+                <button class="btn btn-danger" data-bs-toggle="popover" title="Popover"
+                    data-bs-content="Contenido del popover">Click para popover</button>
+            </div>
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Los popovers muestran información adicional cuando el usuario hace
+                clic, sin ocupar espacio permanente en la página.
+            </div>
+        </section>
+
+        <!-- Progress -->
+        <section id="progress" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-bar-chart text-success"></i> 20. Progress</h2>
+                <p class="text-muted">Barras de progreso para mostrar avance</p>
+            </div>
+
+            <h5>Progreso simple:</h5>
+            <div class="progress mb-3" style="height: 25px;">
+                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100">25%</div>
+            </div>
+
+            <h5>Colores diferentes:</h5>
+            <div class="progress mb-2" style="height: 20px;">
+                <div class="progress-bar bg-success" style="width: 40%">40%</div>
+            </div>
+            <div class="progress mb-2" style="height: 20px;">
+                <div class="progress-bar bg-info" style="width: 60%">60%</div>
+            </div>
+            <div class="progress mb-2" style="height: 20px;">
+                <div class="progress-bar bg-warning" style="width: 80%">80%</div>
+            </div>
+            <div class="progress mb-3" style="height: 20px;">
+                <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+            </div>
+
+            <h5>Progreso animado:</h5>
+            <div class="progress" style="height: 25px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%">75%</div>
+            </div>
+
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Las barras de progreso muestran el avance de procesos como subidas de
+                archivos, instalaciones, encuestas o habilidades.
+            </div>
+        </section>
+
+        <!-- Scrollspy -->
+        <section id="scrollspy" class="section" tabindex="-1">
+            <h2>Scrollspy</h2>
+            <p>Actualiza el índice de navegación según la posición de desplazamiento en la página.</p>
+
+            <div class="row">
+                <div class="col-4">
+                    <div id="list-example" class="list-group">
+                        <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true"
+                        class="scrollspy-example" tabindex="0">
+                        <h4 id="list-item-1">Item 1</h4>
+                        <p>...</p>
+                        <h4 id="list-item-2">Item 2</h4>
+                        <p>...</p>
+                        <h4 id="list-item-3">Item 3</h4>
+                        <p>...</p>
+                        <h4 id="list-item-4">Item 4</h4>
+                        <p>...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Scrollspy mejora la navegación en páginas largas, indicando al usuario
+                en qué sección se encuentra.
+            </div>
+        </section>
+
+        <!-- Spinners -->
+        <section id="spinners" class="component-section mb-5">
+            <div class="component-header">
+                <h2><i class="bi bi-arrow-clockwise text-primary"></i> 22. Spinners</h2>
+                <p class="text-muted">Indicadores de carga animados</p>
+            </div>
+
+            <h5>Spinners border (circulares):</h5>
+            <div class="d-flex gap-3 mb-4">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+                <div class="spinner-border text-danger" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+                <div class="spinner-border text-warning" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+            </div>
+
+            <h5>Spinners grow (pulsantes):</h5>
+            <div class="d-flex gap-3 mb-4">
+                <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+                <div class="spinner-grow text-success" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+                <div class="spinner-grow text-warning" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+            </div>
+
+            <h5>Spinners en botones:</h5>
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Cargando...
+            </button>
+
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Los spinners indican que hay un proceso en curso (cargando datos,
+                enviando formulario, procesando pago).
+            </div>
+        </section>
+
+        <!-- Toasts -->
+        <section id="toasts" class="section" tabindex="-1">
+            <h2>Toasts</h2>
+            <p>Notificaciones temporales que aparecen y desaparecen.</p>
+            <div class="example-row">
+                <button id="showToastBtn" class="btn btn-primary">Mostrar toast</button>
+            </div>
+
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="myToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <strong class="me-auto">Bootstrap</strong>
+                        <small>Ahora</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="toast-body">Este es un toast de ejemplo.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tooltips -->
+        <section id="tooltips" class="section" tabindex="-1">
+            <h2>Tooltips</h2>
+            <p>Pequeñas ventanas con información al pasar el cursor sobre un elemento.</p>
+            <div class="example-row">
+                <button class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Tooltip superior">Tooltip superior</button>
+                <button class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="right"
+                    title="Tooltip a la derecha">Tooltip derecha</button>
+            </div>
+            <div class="info-box mt-3">
+                <strong>¿Para qué sirve?</strong> Los tooltips proporcionan información adicional breve sobre elementos
+                sin ocupar espacio visible permanente.
+            </div>
+        </section>
+        </main>
+    </div>
+    <script src="assents/bootstrap-5.3.8-dist/js/bootstrap.bundle.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
